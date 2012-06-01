@@ -27,6 +27,8 @@ $php composer.phar install
 
 To use Selenium1 and Selenium2 Drivers 
 
+Change javascript _session variable accordingly.
+
 Download Selenium Server from http://seleniumhq.org/download/
 
 $ java -jar selenium-server-standalone-2.21.0.jar
@@ -37,6 +39,19 @@ $./bin/behat
 
 
 To Use Sahi Server 
+
+
+Change behat.yml to 
+
+default:
+  context:
+    class: 'FeatureContext'
+  extensions:
+    Behat\MinkExtension\Extension:
+      base_url: 'http://saucelabs.com/'
+      javascript_session: 'sahi'
+      goutte: ~
+      sahi: 
 
 Download Sahi Server from SourceForge
 
