@@ -1,0 +1,57 @@
+MinkExtension Drivers 
+
+There are some mink drivers that you can use to launch tests in browser
+
+Mostly used drivers are 
+
+1] Selenium2
+2]Selenium1
+3] Sahi
+
+These are the browser emulators. You can also use headless drivers like 
+1] Goutte 
+2] Zombie
+
+
+
+$git clone git@github.com:Shashikant86/Behat-MInkExtensionDrivers.git
+$cd Behat-MInkExtensionDrivers
+
+
+
+Now install Behat, Mink, MinkExtension and their dependencies with composer:
+
+$curl http://getcomposer.org/installer | php
+$php composer.phar install
+
+
+To use Selenium1 and Selenium2 Drivers 
+
+Download Selenium Server from http://seleniumhq.org/download/
+
+$ java -jar selenium-server-standalone-2.21.0.jar
+
+Then Run Tests
+
+$./bin/behat 
+
+
+To Use Sahi Server 
+
+Download Sahi Server from SourceForge
+
+http://sourceforge.net/projects/sahi/
+
+Now navigate to the Sahi Path 
+
+$cd /path_to_sahi
+$cd userdata/bin
+$./start_sahi.sh
+
+Now Run Tests 
+
+./bin/behat
+
+
+You will see tests running in the browser
+
